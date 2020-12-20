@@ -1,0 +1,40 @@
+"""Case-study #3 Investment report
+Developers: Ignatovich D. (70%),
+            Miller A. (20%),
+            Poylova E. (10%).
+"""
+years = int(input("Срок размещения капитала (лет):"))
+initial_capital = float(input("Начальный капитал ($):"))
+percent = float(input("Процентная ставка (%/мес.):"))
+investment_infusion = float(input("Инвестиционные вливания ($/мес.):"))
+initial_capital-=investment_infusion
+for year in range (1, years + 1):
+    print(year,"год")
+    print ("--------------------------------------------")
+    print ("|       |   основа   | сумма %  |          |")
+    print ("| месяц | инвестиций | за месяц | капитал  |")
+    print ("--------------------------------------------")
+    for month in range(1, 13):
+        if month<10:
+            print ('|  ', month, '  |', end="")
+        else:
+            print('| ', month, '  |', end="")
+        initial_capital+=investment_infusion
+        incap=str("%.2f" % (initial_capital))
+       
+            print("%.2f" % initial_capital, (11-len(incap))*' '+'|', end="")
+
+        sum_of_percent=str("%.2f" % (initial_capital*percent/100) 
+            
+            print(sum_of_percent + (10-len(sum_of_percent))*' '+'|', end="")
+
+        initial_capital+=initial_capital*percent/100
+        incap = str("%.2f" % (initial_capital))
+            
+            
+            print("%.2f" % initial_capital + (10-len(incap))*' '+'|', end="")
+
+        print()
+
+    print("--------------------------------------------")
+    print()
