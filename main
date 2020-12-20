@@ -26,7 +26,7 @@ for year in range (1, years + 1):
         elif len(str(incap)) == 5:
            print(' ', incap, '   '+'|', end="")
         elif len(str(incap)) == 6:
-           print(' ', incap, '  '+'|', end="")
+           print(' ', incap, '   '+'|', end="")
         elif len(str(incap)) == 7:
            print('', incap, '   '+'|', end="")
         else:
@@ -40,13 +40,13 @@ for year in range (1, years + 1):
         initial_capital+=initial_capital*percent/100
         incap = str("%.2f" % (initial_capital))
         if len(str(incap)) == 4:
-           print('   ', incap, '   '+'|', end="")
+           print('   ', incap, ' '+'|', end="")
         elif len(str(incap)) == 5:
-           print(' ', incap, '   '+'|', end="")
+           print('  ', incap, ' '+'|', end="")
         elif len(str(incap)) == 6:
-           print(' ', incap, '   '+'|', end="")
+           print(' ', incap, ' '+'|', end="")
         elif len(str(incap)) == 7:
-           print('', incap, '   '+'|', end="")   
+           print('', incap, ' '+'|', end="")   
         else:    
            print("%.2f" % initial_capital + (10-len(incap))*' '+'|', end="")
 
