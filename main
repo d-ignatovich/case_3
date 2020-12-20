@@ -35,7 +35,7 @@ for year in range (1, years + 1):
 
         sum_of_percent=str("%.2f" % (initial_capital*percent/100))
             
-            print(sum_of_percent + (10-len(sum_of_percent))*' '+'|', end="")
+        print(sum_of_percent + (10-len(sum_of_percent))*' '+'|', end="")
 
         initial_capital+=initial_capital*percent/100
         incap = str("%.2f" % (initial_capital))
